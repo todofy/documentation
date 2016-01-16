@@ -1,2 +1,2 @@
 # documentation
-source code for http://doc.todofy.org
+source code for http://doc.todofy.io
