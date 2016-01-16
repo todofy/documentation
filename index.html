@@ -9,6 +9,7 @@
 
     <!-- Le styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/ui/css/ui.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="https://todofy.org/resources/success.ico" type="image/x-icon">
@@ -25,6 +26,11 @@ body {
 blockquote {
   font-size: 10pt;
   color: #333;
+}
+.clearfix {
+  display: block;
+  height: 10px;
+  width: 100%;
 }
 </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -192,9 +198,101 @@ blockquote {
   <div class="page-header">
     <h1>Comment format <small>You can do a variety of stuffs just by a simple comment in your code!</small></h1>
   </div>
-  <div class="alert">
-    <a class="close" data-dismiss="alert">×</a>
-    <strong>Warning!</strong> This section is a draft now, certain features might not have been implemented yet!
+  <div class="info">
+    <div class="widget black">
+<!-- <div class="header"> -->
+    <!-- <span class="img" style="background-image: url(../../../resources/icons_white/info.png)"></span> -->
+    <!-- Did you know its very very easy to add a <strong>TODO</strong> -->
+    <!-- <span class="close disabled"></span> -->
+<!-- </div> -->
+<div class="body" style="padding: 0px">
+    <div class="tabbedSpace">
+        <div class="tabheader">
+            <div class="tab selected" for="C/C++">C / C++</div><div class="tab" for="php">php</div><div class="tab" for="Javascript">Javascript</div><div class="tab" for="Python">Python</div><!-- <div class="tab" for="Ruby" >Ruby</div><div class="tab" for="TypeScript" >TypeScript</div> --><div class="tab" for="HTML">HTML</div><!-- <div class="tab" for="CSS" >CSS</div> -->
+        </div>
+        <div class="tabBody">
+            <div class="tab selected" for="C/C++">
+                <span class="tcomment">// <span class="tspl">TODO</span>: make this function more structured and compact</span><br>
+                <span class="tcomment">// and nice @<span class="tspl">deadline</span>: 1 week @<span class="tspl">reminder</span> 3 days</span><br>
+                <span class="tcomment">// @<span class="tspl">tags</span> - ben, tim, hawk @<span class="tspl">labels</span>: refactoring</span><br>
+                node *<span class="tfunction">getNode</span>( <span class="tdatatype">bool</span> last ) {<br>
+                    <span class="ttabspace"></span>node *n = new node;<br>
+                    <span class="ttabspace"></span><span class="tkeyword">for</span>( <span class="tdatatype">int</span> i = <span class="tconstant">0</span>; i &lt; <span class="tconstant">26</span>; i++ ) {<br>
+                    <span class="ttabspace"></span><span class="ttabspace"></span>n-&gt;ptrs[i] = <span class="tconstant">NULL</span>;<br>
+                    <span class="ttabspace"></span>}<br>
+                }
+            </div>
+            <div class="tab" for="php">
+                <span class="tcomment">/*</span><br>
+                <span class="ttabspace"></span><span class="tcomment"><span class="tspl">TODO</span>: make this function more structured and compact</span><br>
+                <span class="ttabspace"></span><span class="tcomment">and nice @<span class="tspl">deadline</span>: 1 week @<span class="tspl">reminder</span> 3 days</span><br>
+                <span class="ttabspace"></span><span class="tcomment">@<span class="tspl">tags</span> - ben, tim, hawk @<span class="tspl">labels</span>: refactoring</span><br>
+                <span class="tcomment">*/</span><br>
+                <span class="tdatatype">function</span> <span class="tfunction">concatTrimmedElems</span>( $arr ) {<br>
+                <span class="ttabspace"></span>$out = '  ';<br>
+                <span class="ttabspace"></span><span class="tkeyword">foreach</span> ( $arr as $value ) {<br>
+                <span class="ttabspace"></span><span class="ttabspace"></span>$out .= <span class="tfunction">trim</span> ( $value );<br>
+                <span class="ttabspace"></span>}<br>
+                <span class="ttabspace"></span><span class="tkeyword">return</span> $out;<br>
+                }
+            </div>
+            <div class="tab" for="Javascript">
+                <span class="tcomment">/*</span><br>
+                <span class="ttabspace"></span><span class="tcomment"><span class="tspl">TODO</span>: make this function more structured and compact</span><br>
+                <span class="ttabspace"></span><span class="tcomment">and nice @<span class="tspl">deadline</span>: 1 week @<span class="tspl">reminder</span> 3 days</span><br>
+                <span class="ttabspace"></span><span class="tcomment">@<span class="tspl">tags</span> - ben, tim, hawk @<span class="tspl">labels</span>: refactoring</span><br>
+                <span class="tcomment">*/</span><br>
+                <span class="tdatatype">function</span> <span class="tfunction">concatTrimmedElems</span>( arr ) {<br>
+                <span class="ttabspace"></span><span class="tdatatype">var</span> out = '  ';<br>
+                <span class="ttabspace"></span><span class="tkeyword">for</span> ( <span class="tdatatype">var</span> i = 0; i &lt; arr.<span class="tkeyword">length</span>; i++) {<br>
+                <span class="ttabspace"></span><span class="ttabspace"></span>out += arr[i].<span class="tfunction">trim</span>( );<br>
+                <span class="ttabspace"></span>}<br>
+                <span class="ttabspace"></span><span class="tkeyword">return</span> out;<br>
+                }
+            </div>
+            <div class="tab" for="Python">
+                <span class="tcomment">'''</span><br>
+                <span class="ttabspace"></span><span class="tcomment"><span class="tspl">TODO</span>: make this function more structured and compact</span><br>
+                <span class="ttabspace"></span><span class="tcomment">and nice @<span class="tspl">deadline</span>: 1 week @<span class="tspl">reminder</span> 3 days</span><br>
+                <span class="ttabspace"></span><span class="tcomment">@<span class="tspl">tags</span> - ben, tim, hawk @<span class="tspl">labels</span>: refactoring</span><br>
+                <span class="tcomment">'''</span><br>
+                <span class="tdatatype">def</span> <span class="tfunction">concatTrimmedElems</span>( arr ) :<br>
+                <span class="ttabspace"></span>out = '  ';<br>
+                <span class="ttabspace"></span><span class="tkeyword">for</span> elem <span class="tkeyword">in</span> arr :<br>
+                <span class="ttabspace"></span><span class="ttabspace"></span>out += arr[i];<br>
+                <span class="ttabspace"></span><span class="tkeyword">return</span> out;<br>
+                <br>
+            </div>
+            <div class="tab" for="HTML">
+                &lt;/<span class="tkeyword">div</span>&gt;<br>
+                &lt;<span class="tkeyword">div</span> <span class="tfunction">class</span>="<span class="tstring">tab</span>" <span class="tfunction">for</span>="<span class="tstring">Python</span>"&gt;<br>
+                &lt;/<span class="tkeyword">div</span>&gt;<br>
+                <span class="tcomment">&lt;!--</span><br>
+                <span class="ttabspace"></span><span class="tcomment"><span class="tspl">TODO</span>: make this function more structured and compact</span><br>
+                <span class="ttabspace"></span><span class="tcomment">and nice @<span class="tspl">deadline</span>: 1 week @<span class="tspl">reminder</span> 3 days</span><br>
+                <span class="ttabspace"></span><span class="tcomment">@<span class="tspl">tags</span> - ben, tim, hawk @<span class="tspl">labels</span>: refactoring</span><br>
+                <span class="tcomment">--&gt;</span><br>
+                &lt;<span class="tkeyword">div</span> <span class="tfunction">class</span>="<span class="tstring">tab</span>" <span class="tfunction">for</span>="<span class="tstring">HTML</span>"&gt;<br>    
+                &lt;/<span class="tkeyword">div</span>&gt;
+            </div>
+        </div>
+        <div class="tabFooter">
+            This will add a todo <strong>make this function more structured and compact and nice</strong><br>
+            Tag Github users: <span class="label spl">ben</span> <span class="label spl">tim</span> <span class="label spl">hawk</span> and add a label <span class="label spl">refactoring</span> to the repo.
+            <div class="clearfix"></div>
+            <div class="clearfix"></div>
+            Also, it will add a deadline of <strong>1 Week</strong>, and user will be reminded <storng>4 days</storng> prior to that as well.
+            <div class="clearfix"></div>
+            <div class="clearfix"></div>
+            <div class="clearfix"></div>
+            <div class="clearfix"></div>
+            <div class="clearfix"></div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- <div class="footer"></div> -->
+</div>
   </div>
 </section> <!-- format -->
 
@@ -298,5 +396,19 @@ blockquote {
 <script src="assets/js/bootstrap-popover.js"></script> 
 <script src="assets/js/bootstrap-button.js"></script> 
 <script src="assets/js/bootstrap-collapse.js"></script>
+<script src="assets/ui/js/ui.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".tabbedSpace .tabheader .tab").on('click', function() {
+      var _for = $(this).attr('for');
+      $(".tabbedSpace .tabheader .tab").removeClass('selected');
+      $(this).addClass('selected');
+
+      $(".tabbedSpace .tabBody .tab").removeClass('selected');
+      $(".tabbedSpace .tabBody .tab[for='" +_for +"']").addClass('selected');
+
+    });
+  })
+</script>
 </body>
 </html>
