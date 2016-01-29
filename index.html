@@ -460,9 +460,37 @@ int getSum(int a, int b) {
   <div class="page-header">
     <h1>Priority <small>Set priority on todos, to organise them!</small></h1>
   </div>
-  <div class="alert">
-    <a class="close" data-dismiss="alert">×</a>
-    <strong>Warning!</strong> This section is a draft now, certain features might not have been implemented yet!
+  <blockquote>
+    You can set priority for a todo to organise them in the list. It can be added both from dashboard and from
+    the todo comment.
+  </blockquote>
+  <h3> From the dashboard: </h3>
+  <div class="clearfix"></div>
+  You can set priority for a todo from the right hand side menu, click on <code>set priority</code>
+  > <code>select a priority</code>
+  <div style="margin: 10px">
+      <img src="./assets/img/priority.png" alt="labels" style="max-width: 600px">
+  </div>
+  <div class="clearfix"></div>
+  <div class="clearfix"></div>
+
+  <h3> Directly in code comment: </h3>
+  <div class="clearfix"></div>
+
+  You can set priority using <code>@priority</code> parameter in your comments. For example in C++:
+  <div class="clearfix"></div>
+  <pre>
+int getSum(int a, int b) {
+  // TODO: make this a template function @priority: max
+  return a + b;
+}</pre>
+  <div class="clearfix"></div>
+  <blockquote>
+    Note that by default <code>High</code>, <code>Medium</code>, <code>Low</code> priorities are defined in descending order.
+    If a new priority is added from code, its added to the system and given lowest priority. You can change the order of priority from the <a href="#repo_setting">Repository Settings</a>. Also priority is uniform for all the branches in a repository.
+  </blockquote>
+  <div style="margin: 10px">
+      <img src="./assets/img/priority_change.png" alt="labels" style="max-width: 1000px">
   </div>
 </section> <!-- priority -->
 
