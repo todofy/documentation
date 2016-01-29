@@ -296,12 +296,40 @@ blockquote {
 
 <section id="labels">
   <div class="page-header">
-    <h1>Labels <small>Add labels to group your todos to categories!</small></h1>
+  <h1>Labels <small>Add labels to group your todos to categories!</small></h1>
   </div>
-  <div class="alert">
-    <a class="close" data-dismiss="alert">×</a>
-    <strong>Warning!</strong> This section is a draft now, certain features might not have been implemented yet!
+
+  <blockquote>
+    Labels are used to group similar todos into categories and thus for filtering todos in the list.
+    Here's information how you can add it both using the dashboard and directly while adding todo.
+  </blockquote>
+
+  <h3> From the dashboard: </h3>
+  <div class="clearfix"></div>
+
+  You can also add labels without modifying the comments directly from the dashboard. Go to the todo page on Todofy and in the right hand menu, click on labels and select an existing one or add a new one.
+  <div style="margin: 10px">
+      <img src="./assets/img/labels.png" alt="labels" style="max-width: 600px">
   </div>
+
+  <div class="clearfix"></div>
+  <div class="clearfix"></div>
+
+  <h3> Directly in code comment: </h3>
+  <div class="clearfix"></div>
+
+  You can add labels by adding <code>@label</code> parameter in your comments. For example in C++:
+  <div class="clearfix"></div>
+  <pre>
+int getSum(int a, int b) {
+  // TODO: make this a template function @label: template, modification
+  return a + b;
+}</pre>
+
+  This will add labels <code>template</code> & <code>modification</code> to this todo.
+
+
+
 </section> <!-- labels -->
 
 <section id="tags">
@@ -368,12 +396,29 @@ blockquote {
 
 <div class="goodbye">
     <p>Thank you so much for using todofy!</p>
-  </div>
+    <blockquote>
+      Our documentation is open source and hosted at <a href="https://github.com/todofy/documentation">Github</a>. If you find some mistake or think more ifnormation can
+      be added, kindly fork and send a pull request.
+
+    </blockquote>
+</div>
 
       <hr />
 
 <footer>
-    <p>&copy; Todofy 2015</p>
+    <p>
+      &copy; Todofy 2015
+      &middot
+      <a href="http://blog.todofy.io">Blog</a>
+      &middot
+      <a href="https://todofy.org/contact">Contact</a>
+      &middot
+      <a href="https://twitter.com/todoci">Twitter</a>
+      &middot
+      <a href="https://github.com/todofy">Github</a>
+      &middot
+      <a href="https://facebook.com/todofy">Facebook</a>
+    </p>
 </footer>
 
 </div><!-- /container --> 
