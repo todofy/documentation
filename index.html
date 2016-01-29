@@ -370,10 +370,46 @@ int getSum(int a, int b) {
   <div class="page-header">
     <h1>Deadline <small>Set deadline on todos, to finish them on time</small></h1>
   </div>
-  <div class="alert">
-    <a class="close" data-dismiss="alert">×</a>
-    <strong>Warning!</strong> This section is a draft now, certain features might not have been implemented yet!
+  <blockquote>
+    You can set a deadline for a todo, Todofy will track its progress and notify you if a todo crosses it's deadline.
+    Also you can see all your upcoming deadlines (for todos from different repositories) in the dashboard. Similarly you
+    can check all your expired todos from the same page. You can set deadline both from dashboard and code.
+
+  </blockquote>
+
+  <h3> From the dashboard: </h3>
+  <div class="clearfix"></div>
+  You can set deadline for a todo from the right hand side menu, click on <code>set deadline</code>
+  > <code>select a date</code> > <code>click on set</code>.
+  <div style="margin: 10px">
+      <img src="./assets/img/deadline.png" alt="labels" style="max-width: 600px">
   </div>
+
+  <div class="clearfix"></div>
+  <div class="clearfix"></div>
+
+  <h3> Directly in code comment: </h3>
+  <div class="clearfix"></div>
+
+  You can add a deadline using <code>@deadline</code> parameter in your comments. For example in C++:
+  <div class="clearfix"></div>
+  <pre>
+int getSum(int a, int b) {
+  // TODO: make this a template function @deadline: 1 week
+  return a + b;
+}</pre>
+
+  This will set a deadline of <code>1 week</code> for the todo. In a similar way you can set it as:
+  <p><code>now</code></p>
+  <p><code>10 September 2016</code></p>
+  <p><code>+1 day</code></p>
+  <p><code>+1 week</code></p>
+  <p><code>+1 week 2 days 4 hours 2 seconds</code></p>
+  <p><code>next Thursday</code></p>
+  <p><code>last Monday</code></p>
+  <p><code>yyyy-mm-dd</code></p>
+  <p><code>yy-mm-dd</code>, note in this case if <code>yy</code> is between 00-69 it will be mapped as 2000-2069,
+  else it will be mapped as 1970-1999.</p>
 </section> <!-- deadline -->
       
 <section id="reminder">
