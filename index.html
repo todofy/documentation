@@ -336,10 +336,34 @@ int getSum(int a, int b) {
   <div class="page-header">
     <h1>Tags <small>Tag other users to pull them to disucssion!</small></h1>
   </div>
-  <div class="alert">
-    <a class="close" data-dismiss="alert">×</a>
-    <strong>Warning!</strong> This section is a draft now, certain features might not have been implemented yet!
+  <blockquote>
+    You can tag other users in a todo to notify them and bring them to discussion. As soon as a tag is added,
+    Todofy notifies respective users about the todo.
+  </blockquote>
+
+  <h3> From the dashboard: </h3>
+  <div class="clearfix"></div>
+
+  You can also tag users without modifying the todo comments directly from the dashboard. Go to the todo page and in the right hand menu, click on Tags and select an existing one or add a new one by entering their Github username.
+  <div style="margin: 10px">
+      <img src="./assets/img/labels.png" alt="labels" style="max-width: 600px">
   </div>
+
+  <div class="clearfix"></div>
+  <div class="clearfix"></div>
+
+  <h3> Directly in code comment: </h3>
+  <div class="clearfix"></div>
+
+  You can Tag users with their Github username using <code>@tag</code> parameter in your comments. For example in C++:
+  <div class="clearfix"></div>
+  <pre>
+int getSum(int a, int b) {
+  // TODO: make this a template function @tag: mebjas, abhinavdahiya
+  return a + b;
+}</pre>
+
+  This will Tag user <code>mebjas</code> & <code>abhinavdahiya</code> and notify them.
 </section> <!-- tags -->
 
 <section id="deadline">
